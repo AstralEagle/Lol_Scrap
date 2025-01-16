@@ -1,3 +1,4 @@
 requests
 loguru
 bs4
+flask

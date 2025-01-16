@@ -23,7 +23,7 @@ python main.py
 ## Explication
 
 ### Request
-Nous avons utilisé `request` car il est simple d'utilisation et rapide à mettre en place. Il ne nécessite pas de grande configuration et permet de récupérer très facilement les informations dont nous avons besoin. De plus, nous avons une certaine appétence avec cette librairie.
+Nous avons utilisé `requests` car c'est la lib la plus simple afin de pouvoir faire des requêtes en python, elle est aussi très utilisé donc c'est plus simple pour debug
 
 ### Flash
-Nous avons utilisé `flask` car, tout comme `request`, il est simple d'utilisation et rapide à mettre en place. De plus, il est très léger Ce qui permettra de charger rapidement la page, car le scrapping mettra beaucoup de temps vu la quantité de champions dans le jeu League of Legends.
+Nous avons utilisé `flask` car, il est simple d'utilisation et rapide à mettre en place. De plus, il est très léger Ce qui permettra de charger rapidement la page, car le scrapping mettra beaucoup de temps vu la quantité de champions dans le jeu League of Legends.

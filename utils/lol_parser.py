@@ -31,6 +31,7 @@ def get_all_perso_from_lol():
             champions = [span.get("data-champion") for span in champion_spans]
             perso_dict = []
             for champion_name in champions:
+                logger.debug(f"Parsing {champion_name} data")
                 perso_dict.append(find_lol_perso_by_name(champion_name))
 
             return perso_dict
