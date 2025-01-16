@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnages de League of Legends</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .personnage {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .personnage img {
+            max-width: 50px;
+            margin-right: 20px;
+        }
+        .personnage h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste des Personnages de League of Legends</h1>
+    <div id="personnages">
+        {% for personnage in personnages %}
+        <div class="personnage">
+            <img src="{{ personnage['image']['src'] }}" alt="{{ personnage['name'] }}">
+            <div>
+                <h3>{{ personnage['name'] }}</h3>
+                <p><strong>Abilities:</strong> {{ personnage['abilities'] }}</p>
+                <p><strong>Stats:</strong></p>
+                <ul>
+                    {% for key, value in personnage['stats'].items() %}
+                    <li>{{ key }}: {{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
