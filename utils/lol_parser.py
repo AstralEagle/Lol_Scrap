@@ -113,7 +113,7 @@ def find_lol_perso_by_name(name: str):
                 "name": champion_name,
                 "abilities": ",".join(abilities),
                 "stats": stats_table,
-                "image": html.find("img", {"class": "thumbborder"})["src"],
+                "image": f'{html.find("img", {"class": "thumbborder"})["src"].split('.jpg')[0]}.jpg',
             }
 
     except Exception as e:
