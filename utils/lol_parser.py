@@ -32,7 +32,7 @@ def get_all_perso_from_lol():
             perso_dict = []
             for champion_name in champions:
                 perso_dict.append(find_lol_perso_by_name(champion_name))
-            print(perso_dict)
+
             return perso_dict
     except Exception as e:
         logger.error(e)
